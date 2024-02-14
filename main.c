@@ -78,7 +78,7 @@ void test_nn(void);
 int dinit(void);
 
 
-/*
+
 // LEARNING XOR GATE
 // Funciton to define training data
 void get_inputs(void) {
@@ -97,8 +97,9 @@ void get_desired_outputs(void) {
     desired_outputs[2][0] = 1;
     desired_outputs[3][0] = 0;
 }
-*/
 
+
+/*
 // LEARNING AND GATE
 // Function to define training data for the AND logic gate
 void get_inputs(void) {
@@ -115,6 +116,7 @@ void get_desired_outputs(void) {
     desired_outputs[2][0] = 0;
     desired_outputs[3][0] = 1;
 }
+*/
 
 
 void print_dataset() {
@@ -522,12 +524,12 @@ int main (void) {
     memset(num_neurons, 0, num_layers * sizeof(int)); // Each integer value in the block is initialized to 0, later each ith element will be set to the number of neurons in the ith layer
 
     // Now let's define the number of neurons in each layer
-    int num_neurons_in_layer[] = {2, 3, 1}; // This is an array of integers that represents the number of neurons in each layer
+    int num_neurons_in_layer[] = {2, 4, 1}; // This is an array of integers that represents the number of neurons in each layer
     for(i = 0; i < num_layers; i++) {
         num_neurons[i] = num_neurons_in_layer[i]; // We set the number of neurons in each layer to the values in the array
     }
     // Now we have defined the structure of each layer in the neural network. 
-    // Our model has 2 inputs, 3 neurons in the hidden layer, and 1 output neuron
+    // Our model has 2 inputs, 4 neurons in the hidden layer, and 1 output neuron
 
     // Now let us initialize the neural network
     if (init() != SUCCESS_INIT) {

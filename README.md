@@ -34,10 +34,20 @@ After building the project, you can run it by executing the following command in
 
 This will execute the neural network framework and perform the operations defined in the main function, such as training the network and testing it with predefined inputs.
 
-### Understanding Output of ./project
-The model is currently configured to learn simple logic gates. Right now it is learning the AND gate.
+### Model Architecture
+Currently you can define the number of layers and the number of neurons in each layer in the main.c file. The model is currently configured to learn simple logic gates. Right now it is learning the AND gate.
 
-If you wish to test learning the XOR gate just comment the section that specifies the data for AND and uncomment the section that specifies the data for XOR. These sections should be near the top of the main.c file, after the includes and function prototypes.
+As a result the model's architecture is currently very simple and is as follows:
+- Input layer: 2 neurons
+- Hidden layer: 4 neurons
+- Output layer: 1 neuron
+
+The model uses a sigmoid activation function for the hidden layer and output layer. The learning rate is set to 0.05 and the number of epochs is set to 2000.
+
+### Understanding Output of ./project
+The model is currently configured to learn simple logic gates. Right now it is learning the XOR gate.
+
+If you wish to test learning the AND gate just comment the section that specifies the data for XOR and uncomment the section that specifies the data for AND. These sections should be near the top of the main.c file, after the includes and function prototypes.
 
 The output for learning the AND gate should look like this:
 ```
@@ -53,6 +63,22 @@ Inputs: 1.0, 0.0 | Expected: 1.0 | Predicted: 0.04
 
 Output: 1
 Inputs: 1.0, 1.0 | Expected: 0.0 | Predicted: 0.94
+```
+
+The output for learning the XOR gate should look like this:
+```
+Testing the trained neural network:
+Output: 0
+Inputs: 0.0, 0.0 | Expected: 0.0 | Predicted: 0.07
+
+Output: 1
+Inputs: 0.0, 1.0 | Expected: 1.0 | Predicted: 0.91
+
+Output: 1
+Inputs: 1.0, 0.0 | Expected: 1.0 | Predicted: 0.95
+
+Output: 0
+Inputs: 1.0, 1.0 | Expected: 0.0 | Predicted: 0.06
 ```
 ## Dependencies
 
