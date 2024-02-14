@@ -42,8 +42,10 @@ As a result the model's architecture is currently very simple and is as follows:
 - Hidden layer: 4 neurons
 - Output layer: 1 neuron
 
-The model uses a ReLU activation function for the hidden layer 
+The model uses a ReLU activation function for the hidden layer.
+
 The model uses a Sigmoid activation function for the output layer. 
+
 The learning rate is set to 0.05 and the number of training epochs is set to 2000.
 
 ### Understanding Output of ./project
